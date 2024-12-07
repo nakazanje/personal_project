@@ -1,3 +1,3 @@
 # personal_project
 
-Django project variant №13
+Variant №13

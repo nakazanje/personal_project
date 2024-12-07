@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список цехов</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Мебельная фабрика</h1>
+    </header>
+    <div class="container">
+        <nav>
+            <a href='/workshops/'>Список цехов</a> |
+            <a href='/orders/'>Список заказов</a>
+        </nav>
+        <h2>Список цехов</h2>
+        <ul>
+            {% for workshop in workshops %}
+                <li>
+                    {{ workshop.name }} (рабочих: {{ workshop.worker_count }}).
+                    <a href="{% url 'workshop_detail' workshop.id %}">Подробнее</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2024 Мебельная фабрика</p>
+    </footer>
+</body>
+</html>

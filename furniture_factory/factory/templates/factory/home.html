@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мебельная фабрика</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Мебельная фабрика</h1>
+    </header>
+    <div class="container">
+        <nav>
+            <a href='/workshops/'>Список цехов</a> |
+            <a href='/orders/'>Список заказов</a>
+        </nav>
+    </div>
+    <footer>
+        <p>&copy; 2024 Мебельная фабрика</p>
+    </footer>
+</body>
+</html>
